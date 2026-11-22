@@ -1,0 +1,53 @@
+{
+	"FileVersion": 3,
+	"Version": 2,
+	"VersionName": "1.1.0",
+	"FriendlyName": "CoopKit Sessions",
+	"Description": "Online sessions for co-op games: host, find and join through the Online Subsystem (Null, Steam, EOS), a lobby with ready checks and seamless travel, join in progress, reconnection and a Blueprint API.",
+	"Category": "Gameplay",
+	"CreatedBy": "Ivan Iaitckikh",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "CoopKitSessions",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64"
+			]
+		},
+		{
+			"Name": "CoopKitSessionsEditor",
+			"Type": "Editor",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64"
+			]
+		},
+		{
+			"Name": "CoopKitSessionsTests",
+			"Type": "Editor",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [
+				"Win64"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "OnlineSubsystem",
+			"Enabled": true
+		},
+		{
+			"Name": "OnlineSubsystemUtils",
+			"Enabled": true
+		}
+	]
+}

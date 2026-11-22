@@ -5,10 +5,10 @@ Online sessions for a co-op Unreal Engine game, from the main menu to the match:
 - **Blueprint nodes and a C++ subsystem** on top of the engine's Online Subsystem: Null for LAN play and tests, Steam or EOS by configuration only.
 - **Lobby with ready checks:** one component on the game state counts down and travels everyone to the match map, seamlessly when the game mode uses seamless travel.
 - **Reconnection:** a client that loses the connection finds the same session and joins it again; the host recognizes the returning player.
-- **Kick and ban:** the host removes a player and tells them why; a banned player cannot join again until the session ends.
+- **Kick and ban:** the host removes a player and tells them why, and that client does not try to reconnect. A banned player is refused on join, reconnect and direct connection until the session ends. Bans go by online id and are not saved.
 - **Groups:** *Find Sessions For Group* and *Quick Play For Group* list or join only sessions with room for the whole group.
 - **Invites and friends** on Steam: invite a friend, join a friend, and accept invites from the overlay or the friends list. On EOS the engine has no invite overlay, so those calls fail with a clear reason. Not tested with a real Steam or EOS login yet.
-- **Setup check for Steam and EOS:** a window in *Tools > CoopKit Sessions Setup* and a check in the running game find the usual reasons why online play works in the editor but not in a build.
+- **Setup check for Steam and EOS:** a window in *Tools > CoopKit Sessions Setup* and a check in the running game list the usual reasons why online play works in the editor but not in a build, each with a fix. The check cannot see the Steam client.
 - **No base classes to inherit from:** no game mode, game state or player controller of the plugin's own.
 - **Tested with a bad network:** a server and two clients in one editor process, 150 ms packet lag and 2% loss on every connection, for listen and dedicated servers.
 
